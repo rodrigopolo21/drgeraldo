@@ -111,7 +111,7 @@ export function Testimonials() {
           className="mx-auto mt-16 rounded-2xl border border-brand/30 bg-gradient-to-r from-brand/10 to-brand/5 p-8 text-center md:p-12"
         >
           <p className="font-body text-lg text-slatey-light md:text-xl">
-            <span className="font-semibold text-brand">+150 pacientes</span> já transformaram suas vidas através da
+            <span className="font-semibold text-brand">+de 98% dos pacientes atendidos</span> tiveram suas vidas transformadas através da
             <span className="font-semibold text-brand"> Terapia regenerativa e tratamento personalizado</span>
           </p>
         </motion.div>
