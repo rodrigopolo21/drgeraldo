@@ -122,7 +122,7 @@ export function HowItWorks() {
           <div className="relative w-full max-w-sm">
             <Image
               src="/images/luma-logo.jpeg"
-              alt="Tecnologia parceira de diagnóstico avançado"
+              alt="Logo Dr. Geraldo Henrique - Terapia Regenerativa e Tratamento da Dor"
               width={400}
               height={300}
               className="rounded-xl border border-white/10 shadow-premium"
