@@ -24,10 +24,10 @@ const stats = [
   },
   {
     icon: HeartPulse,
-    prefix: "",
-    value: 99,
+    prefix: "+",
+    value: 98,
     suffix: "%",
-    label: "De satisfação",
+    label: "Satisfação",
     desc: "Confiança comprovada",
   },
   {
@@ -74,7 +74,7 @@ export function Stats() {
               <div className="font-sans text-sm font-semibold text-white">
                 {stat.label}
               </div>
-              <div className="font-body text-xs text-slatey-light/60">
+              <div className="font-body text-xs text-slatey-light/80">
                 {stat.desc}
               </div>
             </motion.div>

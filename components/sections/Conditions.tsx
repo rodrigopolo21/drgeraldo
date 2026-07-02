@@ -74,7 +74,7 @@ export function Conditions() {
                 <h3 className="font-sans text-2xl font-semibold text-white">
                   {c.title}
                 </h3>
-                <p className="mt-1.5 font-body text-lg leading-relaxed text-slatey-light/70">
+                <p className="mt-1.5 font-body text-lg leading-relaxed text-slatey-light">
                   {c.text}
                 </p>
               </div>

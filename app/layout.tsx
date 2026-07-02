@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     template: "%s | Dr. Geraldo Henrique",
   },
   description:
-    "Recupere sua qualidade de vida sem dor. Avaliação especializada, diagnóstico preciso e tratamento individualizado em terapia regenerativa e tratamento da dor com o Dr. Geraldo Henrique.",
+    "Recupere sua qualidade de vida sem dor. Consulta especializada, diagnóstico preciso e tratamento individualizado em terapia regenerativa e tratamento da dor com o Dr. Geraldo Henrique.",
   keywords: [
     "terapia regenerativa",
     "tratamento da dor",
-    "medicina regenerativa",
+    "Terapia regenerativa",
     "dor crônica",
     "dor na coluna",
     "dor articular",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     siteName: "Dr. Geraldo Henrique",
     title: "Dr. Geraldo Henrique | Terapia Regenerativa e Tratamento da Dor",
     description:
-      "Recupere sua qualidade de vida sem dor. Avaliação especializada e tratamento individualizado em medicina regenerativa.",
+      "Recupere sua qualidade de vida sem dor. Consulta especializada e tratamento individualizado em Terapia regenerativa.",
     images: [
       {
         url: "/images/dr-geraldo-portrait.jpeg",

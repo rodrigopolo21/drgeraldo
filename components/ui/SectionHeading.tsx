@@ -58,7 +58,7 @@ export function SectionHeading({
         <motion.p
           variants={fadeUp}
           className={cn(
-            "font-body text-xl leading-relaxed text-slatey-light/70 md:text-2xl",
+            "font-body text-xl leading-relaxed text-slatey-light md:text-2xl",
             align === "center" ? "max-w-3xl" : "max-w-2xl"
           )}
         >

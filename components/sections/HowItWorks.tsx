@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Stethoscope, ScanSearch, FileHeart, TrendingUp } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -9,7 +10,7 @@ const steps = [
   {
     icon: Stethoscope,
     step: "01",
-    title: "Avaliação Especializada",
+    title: "Consulta",
     text: "Uma escuta atenta e uma análise clínica profunda da sua história e seus sintomas.",
   },
   {
@@ -93,13 +94,42 @@ export function HowItWorks() {
                 <h3 className="font-sans text-2xl font-semibold text-white">
                   {s.title}
                 </h3>
-                <p className="mt-2.5 max-w-[320px] font-body text-lg leading-relaxed text-slatey-light/70">
+                <p className="mt-2.5 max-w-[320px] font-body text-lg leading-relaxed text-slatey-light">
                   {s.text}
                 </p>
               </motion.div>
             ))}
           </motion.div>
         </div>
+
+        {/* Partner Logo Section */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={fadeUp}
+          className="mt-24 flex flex-col items-center gap-8 md:mt-32"
+        >
+          <div className="text-center">
+            <h3 className="mb-2 font-sans text-2xl font-semibold text-white md:text-3xl">
+              Parceria com Tecnologia Avançada
+            </h3>
+            <p className="mx-auto max-w-2xl font-body text-base text-slatey-light/75 md:text-lg">
+              Contamos com as melhores plataformas de diagnóstico e guia de procedimentos em tempo real,
+              garantindo precisão em cada etapa do seu tratamento regenerativo e recuperação.
+            </p>
+          </div>
+          <div className="relative w-full max-w-sm">
+            <Image
+              src="/images/luma-logo.jpeg"
+              alt="Tecnologia parceira de diagnóstico avançado"
+              width={400}
+              height={300}
+              className="rounded-xl border border-white/10 shadow-premium"
+              priority={false}
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );

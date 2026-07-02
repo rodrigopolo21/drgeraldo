@@ -24,13 +24,13 @@ export function Footer() {
             <p className="mt-1 font-sans text-xs uppercase tracking-[0.25em] text-brand-light/80">
               {DOCTOR.specialty}
             </p>
-            <p className="mt-5 max-w-sm font-body text-sm leading-relaxed text-slatey-light/65">
+            <p className="mt-5 max-w-sm font-body text-sm leading-relaxed text-slatey-light/85">
               Dedicado à recuperação da sua qualidade de vida, mobilidade e
-              autonomia através da medicina regenerativa e do tratamento
+              autonomia através da Terapia regenerativa e do tratamento
               especializado da dor.
             </p>
 
-            <div className="mt-6 flex flex-col gap-1.5 text-sm text-slatey-light/70">
+            <div className="mt-6 flex flex-col gap-1.5 text-sm text-slatey-light/85">
               <span className="font-medium text-white">{DOCTOR.fullName}</span>
               <span>{DOCTOR.rqe}</span>
               <span>{DOCTOR.clinic}</span>
@@ -47,7 +47,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="font-body text-sm text-slatey-light/70 transition-colors hover:text-brand-light"
+                    className="font-body text-sm text-slatey-light/85 transition-colors hover:text-brand-light"
                   >
                     {link.label}
                   </a>
@@ -66,7 +66,7 @@ export function Footer() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-slatey-light/70 transition-colors hover:text-white"
+                className="group flex items-center gap-3 text-slatey-light/85 transition-colors hover:text-white"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-regen transition-colors group-hover:bg-white/10">
                   <MessageCircle className="h-5 w-5" />
@@ -77,14 +77,14 @@ export function Footer() {
                 href={INSTAGRAM_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-slatey-light/70 transition-colors hover:text-white"
+                className="group flex items-center gap-3 text-slatey-light/85 transition-colors hover:text-white"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-light transition-colors group-hover:bg-white/10">
                   <Instagram className="h-5 w-5" />
                 </span>
                 <span className="font-body text-sm">Instagram</span>
               </a>
-              <div className="flex items-center gap-3 text-slatey-light/70">
+              <div className="flex items-center gap-3 text-slatey-light/85">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slatey-light">
                   <MapPin className="h-5 w-5" />
                 </span>
@@ -97,23 +97,23 @@ export function Footer() {
         <div className="hairline my-10" />
 
         <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-          <p className="font-body text-xs text-slatey-light/50">
+          <p className="font-body text-xs text-slatey-light/70">
             © {year} {DOCTOR.fullName}. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
             <a
               href="#"
-              className="font-body text-xs text-slatey-light/50 transition-colors hover:text-slatey-light"
+              className="font-body text-xs text-slatey-light/75 transition-colors hover:text-slatey-light"
             >
               Política de Privacidade
             </a>
-            <span className="font-body text-xs text-slatey-light/40">
+            <span className="font-body text-xs text-slatey-light/65">
               {DOCTOR.rqe}
             </span>
           </div>
         </div>
 
-        <p className="mt-8 text-center font-body text-[11px] leading-relaxed text-slatey-light/40">
+        <p className="mt-8 text-center font-body text-[11px] leading-relaxed text-slatey-light/65">
           Este conteúdo tem caráter informativo e não substitui a consulta médica
           presencial. Resultados podem variar de acordo com cada paciente.
         </p>

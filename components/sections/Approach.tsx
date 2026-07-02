@@ -9,7 +9,7 @@ const pillars = [
   {
     icon: Crosshair,
     title: "Diagnóstico Mais Preciso",
-    text: "Identificamos a real origem da dor com avaliação detalhada e tecnologia de ponta.",
+    text: "Identificamos a real origem da dor com Consulta detalhada e tecnologia de ponta.",
   },
   {
     icon: Cpu,
@@ -71,7 +71,7 @@ export function Approach() {
             variants={fadeUp}
             className="mt-6 max-w-lg font-body text-base leading-relaxed text-slatey-light/75 md:text-lg"
           >
-            A medicina regenerativa atua estimulando os mecanismos naturais de
+            A Terapia regenerativa atua estimulando os mecanismos naturais de
             recuperação do próprio corpo. Combinada a um diagnóstico preciso, ela
             permite resultados mais duradouros e uma verdadeira retomada da
             qualidade de vida.
@@ -84,7 +84,7 @@ export function Approach() {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/images/regen-dna.jpg"
-                alt="Representação de medicina regenerativa e regeneração celular"
+                alt="Representação de Terapia regenerativa e regeneração celular"
                 fill
                 sizes="100vw"
                 priority
@@ -115,7 +115,7 @@ export function Approach() {
               <h3 className="font-sans text-base font-semibold text-white">
                 {p.title}
               </h3>
-              <p className="font-body text-sm leading-relaxed text-slatey-light/70">
+              <p className="font-body text-sm leading-relaxed text-slatey-light">
                 {p.text}
               </p>
             </motion.div>

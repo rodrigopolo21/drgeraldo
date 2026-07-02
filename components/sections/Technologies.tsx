@@ -8,7 +8,7 @@ import { fadeUp, fromRight, scaleIn, staggerContainer, viewportOnce } from "@/li
 const regenVisuals = [
   {
     src: "/images/regen-cells.jpg",
-    alt: "Medicina regenerativa em nível celular",
+    alt: "Terapia regenerativa em nível celular",
     label: "Regeneração Celular",
   },
 ];
@@ -104,7 +104,7 @@ export function Technologies() {
                   <h3 className="font-sans text-base font-semibold text-white md:text-lg">
                     {t.title}
                   </h3>
-                  <p className="mt-1.5 font-body text-sm leading-relaxed text-slatey-light/70">
+                  <p className="mt-1.5 font-body text-sm leading-relaxed text-slatey-light">
                     {t.text}
                   </p>
                 </div>

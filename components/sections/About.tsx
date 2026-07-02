@@ -59,7 +59,7 @@ export function About() {
                 <div className="font-sans text-sm font-semibold text-white">
                   {DOCTOR.rqe}
                 </div>
-                <div className="font-body text-xs text-slatey-light/60">
+                <div className="font-body text-xs text-slatey-light/80">
                   Registro de Qualificação
                 </div>
               </div>
@@ -113,8 +113,8 @@ export function About() {
           </motion.ul>
 
           <motion.div variants={fadeUp} className="mt-10 flex items-center gap-4">
-            <CTAButton href={WHATSAPP_LINK} ariaLabel="Agendar avaliação com o Dr. Geraldo">
-              Agendar Avaliação
+            <CTAButton href={WHATSAPP_LINK} ariaLabel="Agendar Consulta com o Dr. Geraldo">
+              Agendar Consulta
             </CTAButton>
             <a
               href={INSTAGRAM_LINK}
@@ -134,7 +134,7 @@ export function About() {
               {[
                 { icon: Award, prefix: "+", value: 15, suffix: "", label: "Anos de experiência" },
                 { icon: Users, prefix: "+", value: 7000, suffix: "", label: "Pacientes atendidos" },
-                { icon: HeartPulse, prefix: "", value: 99, suffix: "%", label: "De satisfação" },
+                { icon: HeartPulse, prefix: "+", value: 98, suffix: "%", label: "Satisfação" },
                 { icon: GraduationCap, prefix: "+", value: 8, suffix: "", label: "Especializações" },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col items-start gap-2">
@@ -144,7 +144,7 @@ export function About() {
                   <div className="font-stat text-2xl font-bold text-white md:text-3xl">
                     <Counter to={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   </div>
-                  <div className="font-sans text-sm text-slatey-light/80">{stat.label}</div>
+                  <div className="font-sans text-sm text-slatey-light">{stat.label}</div>
                 </div>
               ))}
             </div>

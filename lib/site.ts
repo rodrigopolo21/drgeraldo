@@ -2,7 +2,7 @@
 export const WHATSAPP_NUMBER = "5598984062269";
 export const WHATSAPP_DISPLAY = "(98) 98406-2269";
 export const WHATSAPP_MESSAGE =
-  "Olá Dr. Geraldo! Gostaria de agendar uma avaliação especializada.";
+  "Olá Dr. Geraldo! Gostaria de agendar uma Consulta especializada.";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE
 )}`;
@@ -18,7 +18,7 @@ export const DOCTOR = {
 };
 
 export const NAV_LINKS = [
-  { label: "O Médico", href: "#medico" },
+  { label: "Sobre Mim", href: "#medico" },
   { label: "Abordagem", href: "#abordagem" },
   { label: "Tecnologias", href: "#tecnologias" },
   { label: "Como Funciona", href: "#como-funciona" },

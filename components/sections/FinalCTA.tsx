@@ -51,9 +51,9 @@ export function FinalCTA() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-7 max-w-xl font-body text-base leading-relaxed text-slatey-light/80 md:text-lg"
+            className="text-on-image mt-7 max-w-xl font-body text-base leading-relaxed text-slatey-light md:text-lg"
           >
-            Sua recuperação merece atenção especializada. Agende sua avaliação e
+            Sua recuperação merece atenção especializada. Agende sua Consulta e
             descubra o caminho para viver com mais liberdade, mobilidade e
             autonomia.
           </motion.p>
@@ -80,7 +80,7 @@ export function FinalCTA() {
                 <Phone className="h-5 w-5" />
               </span>
               <span className="flex flex-col">
-                <span className="font-sans text-xs uppercase tracking-wider text-slatey-light/60">
+                <span className="font-sans text-xs uppercase tracking-wider text-slatey-light/80">
                   WhatsApp
                 </span>
                 <span className="font-stat text-lg font-semibold text-white">

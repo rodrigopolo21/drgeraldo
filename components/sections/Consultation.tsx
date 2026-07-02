@@ -13,7 +13,7 @@ const expectations = [
   },
   {
     icon: ClipboardList,
-    title: "Avaliação completa",
+    title: "Consulta completa",
     text: "Análise clínica detalhada, considerando todo o seu contexto — não apenas o sintoma.",
   },
   {
@@ -67,7 +67,7 @@ export function Consultation() {
                 <h3 className="font-sans text-2xl font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="font-body text-lg leading-relaxed text-slatey-light/70">
+                <p className="font-body text-lg leading-relaxed text-slatey-light">
                   {item.text}
                 </p>
               </div>

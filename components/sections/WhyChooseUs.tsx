@@ -69,7 +69,7 @@ export function WhyChooseUs() {
                   <h3 className="font-sans text-base font-semibold text-white">
                     {r.title}
                   </h3>
-                  <p className="mt-1.5 font-body text-sm leading-relaxed text-slatey-light/70">
+                  <p className="mt-1.5 font-body text-sm leading-relaxed text-slatey-light">
                     {r.text}
                   </p>
                 </div>

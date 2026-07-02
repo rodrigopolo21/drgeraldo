@@ -67,7 +67,7 @@ export function PainSection() {
               <h3 className="font-sans text-2xl font-semibold text-white">
                 {item.title}
               </h3>
-              <p className="font-body text-lg leading-relaxed text-slatey-light/70">
+              <p className="font-body text-lg leading-relaxed text-slatey-light">
                 {item.text}
               </p>
             </motion.div>

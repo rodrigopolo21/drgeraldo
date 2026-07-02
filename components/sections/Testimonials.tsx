@@ -19,9 +19,9 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Ana Costa",
-    title: "Jornalista",
-    comment: "O que mais me impressionou foi o atendimento humanizado. Não é aquele consultório frio e robótico. O Dr. Geraldo ouve, entende sua história e monta um plano só pra você. Resultado? Dores crônicas sumiram em 3 meses!",
+    name: "Fernanda Lima",
+    title: "Fisioterapeuta",
+    comment: "Como fisioterapeuta, sou muito exigente com tratamento. A dor do nervo ciático me travava há mais de um ano e nada resolvia de verdade. O diagnóstico do Dr. Geraldo foi certeiro e o plano regenerativo mudou o jogo. Hoje trabalho sem dor e recomendo de olhos fechados.",
     rating: 5,
   },
   {
@@ -31,9 +31,9 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Patricia Oliveira",
-    title: "Arquiteta",
-    comment: "Lesão no ombro que durava 2 anos. Consultei a doutora (sim, tem profissional mulher no time!) e em 6 semanas eu conseguia movimentar normalmente. O pós-tratamento deles é impecável, orientação total. Super recomendo!",
+    name: "Bruno Carvalho",
+    title: "Engenheiro",
+    comment: "Tendinite crônica no cotovelo me impedia até de segurar a xícara de café. Já tinha tentado de tudo, sem resultado. Com a terapia regenerativa daqui, em poucas semanas a dor foi embora de vez. Atendimento sério, tecnologia de verdade e o Dr. Geraldo explica cada passo. Valeu demais! 💪",
     rating: 5,
   },
   {
@@ -81,7 +81,7 @@ export function Testimonials() {
                   <h3 className="font-sans text-lg font-semibold text-white">
                     {testimonial.name}
                   </h3>
-                  <p className="font-body text-sm text-slatey-light/60">
+                  <p className="font-body text-sm text-slatey-light/80">
                     {testimonial.title}
                   </p>
                 </div>
@@ -96,7 +96,7 @@ export function Testimonials() {
                 ))}
               </div>
 
-              <p className="font-body text-base leading-relaxed text-slatey-light/80">
+              <p className="font-body text-base leading-relaxed text-slatey-light">
                 "{testimonial.comment}"
               </p>
             </motion.div>
@@ -110,9 +110,9 @@ export function Testimonials() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mx-auto mt-16 rounded-2xl border border-brand/30 bg-gradient-to-r from-brand/10 to-brand/5 p-8 text-center md:p-12"
         >
-          <p className="font-body text-lg text-slatey-light/80 md:text-xl">
+          <p className="font-body text-lg text-slatey-light md:text-xl">
             <span className="font-semibold text-brand">+150 pacientes</span> já transformaram suas vidas através da
-            <span className="font-semibold text-brand"> medicina regenerativa e tratamento personalizado</span>
+            <span className="font-semibold text-brand"> Terapia regenerativa e tratamento personalizado</span>
           </p>
         </motion.div>
       </div>

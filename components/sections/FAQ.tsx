@@ -16,15 +16,15 @@ const faqs = [
   },
   {
     q: "Terei melhora já no primeiro atendimento?",
-    a: "Muitos pacientes relatam alívio e clareza já na primeira avaliação, pois saem entendendo a origem do problema e o plano de tratamento. A evolução completa, porém, é construída ao longo do acompanhamento individualizado.",
+    a: "Muitos pacientes relatam alívio e clareza já na primeira Consulta, pois saem entendendo a origem do problema e o plano de tratamento. A evolução completa, porém, é construída ao longo do acompanhamento individualizado.",
   },
   {
-    q: "Já tentei outros tratamentos. Vale a pena fazer uma avaliação?",
+    q: "Já tentei outros tratamentos. Vale a pena fazer uma Consulta?",
     a: "Sim. Grande parte dos nossos pacientes chega justamente após tentar outras abordagens sem sucesso. A diferença está em investigar a verdadeira causa da dor, e não apenas tratar o sintoma.",
   },
   {
     q: "Como saber se esse tratamento é indicado para mim?",
-    a: "A avaliação especializada existe exatamente para isso. Nela, analisamos seu caso de forma completa e individual para definir se — e como — a terapia regenerativa pode ajudar você.",
+    a: "A Consulta especializada existe exatamente para isso. Nela, analisamos seu caso de forma completa e individual para definir se — e como — a terapia regenerativa pode ajudar você.",
   },
   {
     q: "Quanto tempo leva para perceber resultados?",
@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "Quanto tempo dura a consulta?",
-    a: "A consulta é conduzida sem pressa. Reservamos o tempo necessário para uma escuta atenta, avaliação completa e orientações claras sobre os próximos passos.",
+    a: "A consulta é conduzida sem pressa. Reservamos o tempo necessário para uma escuta atenta, Consulta completa e orientações claras sobre os próximos passos.",
   },
   {
     q: "Posso levar exames anteriores?",

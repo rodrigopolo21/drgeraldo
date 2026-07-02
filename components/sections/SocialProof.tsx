@@ -122,7 +122,7 @@ export function SocialProof() {
           ))}
         </motion.div>
 
-        <p className="mt-10 text-center font-body text-sm text-slatey-light/50">
+        <p className="mt-10 text-center font-body text-sm text-slatey-light/70">
           * Resultados podem variar de acordo com cada paciente e cada quadro
           clínico.
         </p>
@@ -186,7 +186,7 @@ export function SocialProof() {
               <ChevronRight className="h-6 w-6" />
             </button>
 
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 font-sans text-sm text-slatey-light/70">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 font-sans text-sm text-slatey-light">
               {openIndex + 1} / {testimonials.length}
             </div>
           </motion.div>

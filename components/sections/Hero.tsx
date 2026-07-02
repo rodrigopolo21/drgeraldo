@@ -18,7 +18,6 @@ export function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
   const frameIndexRef = useRef(0);
-  const rafRef = useRef<number | null>(null);
   const [mounted, setMounted] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
@@ -58,6 +57,7 @@ export function Hero() {
     if (!canvas) return;
 
     let loadedCount = 0;
+    let cancelled = false;
     const images: HTMLImageElement[] = new Array(FRAME_COUNT);
 
     function handleResize() {
@@ -68,21 +68,37 @@ export function Hero() {
       drawFrame(frameIndexRef.current);
     }
 
+    // Pré-decodifica cada frame antes de usá-lo. Desenhar um JPG ainda não
+    // decodificado bloqueia a main thread no meio do scroll — principal
+    // causa do travamento. Com decode() a bitmap já está pronta para o draw.
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new Image();
       img.decoding = "async";
-      img.onload = () => {
+      images[i] = img;
+
+      const onReady = () => {
+        if (cancelled) return;
         loadedCount++;
-        if (i === 0) {
-          handleResize();
-        }
+        if (i === 0) handleResize();
         if (loadedCount === FRAME_COUNT) {
           setLoaded(true);
           handleResize();
         }
       };
+
       img.src = getFrameSrc(i);
-      images[i] = img;
+
+      if (typeof img.decode === "function") {
+        img
+          .decode()
+          .then(onReady)
+          .catch(() => {
+            if (img.complete && img.naturalWidth) onReady();
+            else img.onload = onReady;
+          });
+      } else {
+        img.onload = onReady;
+      }
     }
     imagesRef.current = images;
 
@@ -105,20 +121,20 @@ export function Hero() {
             trigger: sectionRef.current,
             start: "top top",
             end: () => `+=${window.innerHeight * 2.0}`,
-            scrub: 0.6,
+            scrub: 1,
             pin: true,
             anticipatePin: 1,
             invalidateOnRefresh: true,
             fastScrollEnd: true,
           },
+          // O GSAP já roda no próprio ticker (rAF). Desenhar direto aqui —
+          // sem um requestAnimationFrame extra — remove ~1 frame de latência
+          // e mantém a sequência colada ao scroll, sem stutter.
           onUpdate: () => {
             const newIndex = Math.round(obj.frame);
             if (newIndex !== frameIndexRef.current) {
               frameIndexRef.current = newIndex;
-              if (rafRef.current) cancelAnimationFrame(rafRef.current);
-              rafRef.current = requestAnimationFrame(() => {
-                drawFrame(newIndex);
-              });
+              drawFrame(newIndex);
             }
           },
         });
@@ -126,8 +142,8 @@ export function Hero() {
     });
 
     return () => {
+      cancelled = true;
       window.removeEventListener("resize", handleResize);
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
       if (tween) {
         tween.scrollTrigger?.kill();
         tween.kill();
@@ -152,7 +168,8 @@ export function Hero() {
 
       {/* Dark overlays for text readability */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-transparent" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/30" />
+      {/* Bottom scrim: reforçado no mobile (texto fica embaixo sobre o brilho da imagem) */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/20 md:from-ink/70 md:via-transparent md:to-ink/30" />
 
       {/* Loading indicator */}
       {mounted && !loaded && (
@@ -189,10 +206,10 @@ export function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-3 sm:mt-6 md:mt-8 max-w-xl font-body text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slatey-light/80"
+            className="text-on-image mt-3 sm:mt-6 md:mt-8 max-w-xl font-body text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-slatey-light"
           >
             Te ajudo a recuperar o prazer de viver sem dor. Através de uma
-            avaliação especializada, diagnóstico preciso e um plano de tratamento
+            Consulta especializada, diagnóstico preciso e um plano de tratamento
             individualizado, ajudamos pessoas a recuperar{" "}
             <span className="text-white">mobilidade, autonomia e qualidade de vida.</span>
           </motion.p>
@@ -206,9 +223,9 @@ export function Hero() {
               Quero Agendar Minha Consulta
             </CTAButton>
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2.5 text-sm text-slatey-light/70">
+              <div className="text-on-image flex items-center gap-2.5 text-sm text-slatey-light">
                 <ShieldCheck className="h-5 w-5 text-regen" />
-                Avaliação especializada e individualizada
+                Consulta especializada e individualizada
               </div>
               <a
                 href={INSTAGRAM_LINK}
